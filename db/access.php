@@ -14,25 +14,34 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
+/**
+ * Plugin strings are defined here.
+ *
+ * @package     block_testblock
+ * @category    string
+ * @copyright   2024 Oliver Tiemann mail@olivertiemann.eu
+ * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 defined('MOODLE_INTERNAL') || die();
 
-$capabilities = array(
-    'block/testblock:myaddinstance' => array(
+$capabilities = [
+    'block/testblock:myaddinstance' => [
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
-        'archetypes' => array(
+        'archetypes' => [
             'user' => CAP_ALLOW,
-        ),
+        ],
         'clonepermissionsfrom' => 'moodle/my:manageblocks',
-    ),
-    'block/testblock:addinstance' => array(
+    ],
+    'block/testblock:addinstance' => [
         'riskbitmask' => RISK_SPAM | RISK_XSS,
         'captype' => 'write',
         'contextlevel' => CONTEXT_BLOCK,
-        'archetypes' => array(
+        'archetypes' => [
             'editingteacher' => CAP_ALLOW,
             'manager' => CAP_ALLOW
-        ),
+        ],
         'clonepermissionsfrom' => 'moodle/site:manageblocks',
-    ),
-);
+    ],
+];

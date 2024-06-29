@@ -37,26 +37,27 @@ class block_testblock extends block_list {
      * @return stdClass The block contents.
      */
     public function get_content() {
+        // Check if content is cached.
         if ($this->content !== null) {
             return $this->content;
         }
 
-        if (empty($this->instance)) {
-            $this->content = new stdClass();
-            $this->content->text = 'Instance is not set.';
-            return $this->content;
-        }
-
+        // Create a new stdClass object.
         $this->content = new stdClass();
         $this->content->items = array();
         $this->content->icons = array();
         $this->content->footer = '';
 
-        if (!empty($this->config->text)) {
-            $this->content->text = $this->config->text;
-        } else {
-            $text = 'Please define the content text in /blocks/testblock/block_testblock.php.';
-            $this->content->text = $text;
+        // Get all the courses that this user is enrolled in.
+        if ($mycourses = enrol_get_my_courses()) {
+            foreach ($mycourses as $mycourse) {
+                $this->content->items[] = $mycourse->fullname;
+            }
+        }
+
+        // Message if the user is editing the page.
+        if ($this->page->user_is_editing()) {
+            $this->content->footer = '<br>' . html_writer::tag('div', get_string('editingmessage', 'block_testblock'));
         }
 
         return $this->content;
@@ -89,5 +90,5 @@ class block_testblock extends block_list {
             'site-index' => true
         );
     }
+
 }
-?>

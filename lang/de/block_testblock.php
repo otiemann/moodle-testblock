@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Testblock';
 $string['testblock'] = 'Testblock';
-$string['testblock:addinstance'] = 'Add a new testblock block';
-$string['testblock:myaddinstance'] = 'Add a new testblock block to my moodle';
-$string['editingmessage'] = 'This block is being edited.';
-$string['blocktitle'] = 'Block title';
+$string['testblock:addinstance'] = 'Füge einen neuen Block hinzu';
+$string['testblock:myaddinstance'] = 'Füge einen neuen Block hinzu';
+$string['editingmessage'] = 'Dieser Block wird gerade bearbeitet.';
+$string['blocktitle'] = 'Blocktitel';

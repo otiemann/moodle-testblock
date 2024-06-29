@@ -23,11 +23,25 @@
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+/**
+ * Class block_testblock_edit_form
+ *
+ * Form for editing block settings.
+ *
+ * @package block_testblock
+ */
 class block_testblock_edit_form extends block_edit_form {
+
+    /**
+     * Specific definition of the form elements.
+     *
+     * @param MoodleQuickForm $mform The form being built.
+     */
     protected function specific_definition($mform) {
         $mform->addElement('header', 'configheader', get_string('blocksettings', 'block'));
         $mform->addElement('text', 'config_title', get_string('blocktitle', 'block_testblock'));
         $mform->setType('config_title', PARAM_TEXT);
     }
 }
-?>
+
+

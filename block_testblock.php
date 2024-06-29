@@ -44,8 +44,8 @@ class block_testblock extends block_list {
 
         // Create a new stdClass object.
         $this->content = new stdClass();
-        $this->content->items = array();
-        $this->content->icons = array();
+        $this->content->items = [];
+        $this->content->icons = [];
         $this->content->footer = '';
 
         // Get all the courses that this user is enrolled in.
@@ -84,11 +84,11 @@ class block_testblock extends block_list {
      * @return string[] Array of pages and permissions.
      */
     public function applicable_formats() {
-        return array(
+        return [
             'all' => true,
             'course-view' => true,
-            'site-index' => true
-        );
+            'site-index' => true,
+        ];
     }
 
 }

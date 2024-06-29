@@ -21,7 +21,7 @@
  * @copyright   2024 Oliver Tiemann mail@olivertiemann.eu
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class block_testblock extends block_base {
+class block_testblock extends block_list {
 
     /**
      * Initializes class member variables.

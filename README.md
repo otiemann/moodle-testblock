@@ -1,8 +1,6 @@
 # Testblock #
 
-TODO Describe the plugin shortly here.
-
-TODO Provide more detailed description here.
+This Moodle plugin is for testing purposes only. It is a simple block that displays the courses that the user is enrolled in and a message if the user is editing the page.
 
 ## Installing via uploaded ZIP file ##
 

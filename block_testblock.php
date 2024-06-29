@@ -37,13 +37,13 @@ class block_testblock extends block_list {
      * @return stdClass The block contents.
      */
     public function get_content() {
-
         if ($this->content !== null) {
             return $this->content;
         }
 
         if (empty($this->instance)) {
-            $this->content = '';
+            $this->content = new stdClass();
+            $this->content->text = 'Instance is not set.';
             return $this->content;
         }
 
@@ -84,6 +84,10 @@ class block_testblock extends block_list {
      */
     public function applicable_formats() {
         return array(
+            'all' => true,
+            'course-view' => true,
+            'site-index' => true
         );
     }
 }
+?>

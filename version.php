@@ -18,7 +18,7 @@
  * Plugin version and other meta-data are defined here.
  *
  * @package     block_testblock
- * @copyright   2024 Oliver Tiemann mail@olivertiemann.eu
+ * @copyright   2024 Oliver Tiemann <mail@olivertiemann.eu>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
